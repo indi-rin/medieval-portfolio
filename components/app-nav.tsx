@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import {
   NavigationMenu,
   NavigationMenuItem,
@@ -7,19 +8,26 @@ import {
   NavigationMenuList,
 } from "@/components/ui/navigation-menu";
 
+// INDI: Figure out how to space the options out
 export const AppNav = () => {
   return (
-    <div className="flex items-center justify-center">
-      <NavigationMenu>
+    <div className="flex items-center justify-center w-full my-6">
+      <NavigationMenu className="bg-sand-dune rounded-lg w-full p-2">
         <NavigationMenuList>
           <NavigationMenuItem>
-            <NavigationMenuLink>Home</NavigationMenuLink>
+            <NavigationMenuLink render={<Link href="/" />}>
+              Home
+            </NavigationMenuLink>
           </NavigationMenuItem>
           <NavigationMenuItem>
-            <NavigationMenuLink>About</NavigationMenuLink>
+            <NavigationMenuLink render={<Link href="/about" />}>
+              About
+            </NavigationMenuLink>
           </NavigationMenuItem>
           <NavigationMenuItem>
-            <NavigationMenuLink>Projects</NavigationMenuLink>
+            <NavigationMenuLink render={<Link href="/projects" />}>
+              Projects
+            </NavigationMenuLink>
           </NavigationMenuItem>
         </NavigationMenuList>
       </NavigationMenu>

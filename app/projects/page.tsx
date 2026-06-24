@@ -2,14 +2,14 @@ import { ProjectCard, type Project } from "@/components/project-card";
 
 const ProjectsPage = () => {
   return (
-    <div className="flex flex-col justify-center items-center p-6">
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-20 overflow-x-auto">
+    <div className="relative flex flex-col flex-1 w-full items-center p-6 pb-56">
+      <div className="relative grid w-full grid-cols-1 md:grid-cols-2 gap-8 md:gap-20 md:px-16 lg:px-24 xl:px-32 overflow-x-auto justify-items-center">
         {PROJECTS.map((project, idx) => (
           <ProjectCard project={project} key={idx} />
         ))}
       </div>
 
-      <div className="bg-olive-wood h-44 flex justify-center items-center p-4 absolute bottom-8 right-8">
+      <div className="absolute bottom-8 right-8 flex h-44 items-center justify-center bg-olive-wood p-4">
         Placeholder for graphic
       </div>
     </div>
@@ -18,7 +18,7 @@ const ProjectsPage = () => {
 
 export default ProjectsPage;
 
-// INDI: Dummy data
+// INDI: Draft data
 const PROJECTS: Project[] = [
   {
     name: "Set Game",

@@ -14,18 +14,17 @@ export type Project = {
 
 export const ProjectCard = ({ project }: { project: Project }) => {
   return (
-    <Item variant="muted" className="max-w-96">
+    <Item variant="muted">
       <ItemContent className="p-2">
-        <ItemTitle className="text-2xl text-dusty-grape">
+        <ItemTitle className="text-2xl text-dusty-grape font-semibold">
           {project.name}
         </ItemTitle>
 
-        <ItemDescription className="text-base text-charcoal-blue my-2">
-          <p className="mb-2">{project.date}</p>
-          <p>{project.description}</p>
+        <ItemDescription className="text-base text-charcoal-blue mb-2 flex flex-col gap-1.5">
+          <span className="mb-2 italic">{project.date}</span>
+          <span>{project.description}</span>
         </ItemDescription>
 
-        {/* INDI: Make these links */}
         <div className="flex flex-row items-center justify-center gap-2.5">
           <a
             href={project.github}

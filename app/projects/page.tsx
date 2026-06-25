@@ -2,6 +2,7 @@ import { ProjectCard, type Project } from "@/components/project-card";
 
 const ProjectsPage = () => {
   return (
+    // INDI: Confirm this pb once the actual graphic is added
     <div className="relative flex flex-col flex-1 w-full items-center p-6 pb-56">
       <div className="relative grid w-full grid-cols-1 md:grid-cols-2 gap-8 md:gap-20 md:px-16 lg:px-24 xl:px-32 overflow-x-auto justify-items-center">
         {PROJECTS.map((project, idx) => (

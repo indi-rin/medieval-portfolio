@@ -34,7 +34,7 @@ export const ProjectCard = ({ project }: { project: Project }) => {
           >
             <HugeiconsIcon
               icon={GithubIcon}
-              className="text-dusty-grape hover:text-dusty-grape/70"
+              className="text-dusty-grape hover:text-dusty-grape/70 transition-colors duration-500"
             />
           </a>
 
@@ -47,7 +47,7 @@ export const ProjectCard = ({ project }: { project: Project }) => {
             >
               <HugeiconsIcon
                 icon={Globe02Icon}
-                className="text-dusty-grape hover:text-dusty-grape/70"
+                className="text-dusty-grape hover:text-dusty-grape/70 transition-colors duration-500"
               />
             </a>
           )}

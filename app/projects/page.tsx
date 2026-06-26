@@ -16,9 +16,10 @@ const ProjectsPage = () => {
         aria-hidden
       >
         <Image
-          alt="Pixel of a medieval blacksmith's anvil"
+          alt="Pixel art of a medieval blacksmith's anvil"
           src={Anvil}
           height={320}
+          loading="eager"
         />
       </div>
     </div>
@@ -31,7 +32,8 @@ export default ProjectsPage;
 const PROJECTS: Project[] = [
   {
     name: "Set Game",
-    description: "Recreating the Set Daily Puzzle with some former coworkers",
+    description:
+      "After the Set Daily Puzzle was retired in 2025, some former coworkers and I decided to create our own version since we were such fans of the original.",
     github: "https://github.com/cpoonolly/set-game",
     link: "https://cpoonolly.github.io/set-game/",
     date: "August 2025 – present",
@@ -39,7 +41,7 @@ const PROJECTS: Project[] = [
   {
     name: "Portfolio v1",
     description:
-      "My original portfolio website, built after graduating from Fullstack Academy",
+      "My original portfolio website, built after graduating from Fullstack Academy and including projects I made during the program.",
     github: "https://github.com/indi-rin/portfolio",
     link: "https://indigorinearson.netlify.app/",
     date: " January 2022 – February 2023",

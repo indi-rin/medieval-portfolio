@@ -3,15 +3,9 @@
 import { HugeiconsIcon } from "@hugeicons/react";
 import { Item, ItemContent, ItemDescription, ItemTitle } from "./ui/item";
 import { GithubIcon, Globe02Icon } from "@hugeicons/core-free-icons";
+import { type Project } from "@/lib/content";
 
-export type Project = {
-  name: string;
-  description: string;
-  github: string;
-  link?: string;
-  date: string;
-};
-
+// INDI: Add image and improve styling
 export const ProjectCard = ({ project }: { project: Project }) => {
   return (
     <Item variant="muted">

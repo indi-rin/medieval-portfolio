@@ -47,7 +47,7 @@ export const AlternatingPortrait = () => {
     >
       <Image
         src={portrait}
-        alt="Pixel art portrait of Indigo dressed in medieval armor and carrying a sword"
+        alt="Pixel art portrait of Indigo as a medieval knight"
         fill
         priority
         sizes="208px"
@@ -59,7 +59,7 @@ export const AlternatingPortrait = () => {
       />
       <Image
         src={headshot}
-        alt="Headshot of Indigo Rinearson"
+        alt="Photographic headshot of Indigo"
         fill
         sizes="208px"
         className={cn(

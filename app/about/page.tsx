@@ -2,7 +2,7 @@ import { GithubIcon, Linkedin02Icon } from "@hugeicons/core-free-icons";
 import { HugeiconsIcon } from "@hugeicons/react";
 
 const LINK_CLASSNAME =
-  "text-periwinkle hover:text-periwinkle/70 transition-colors duration-500";
+  "text-periwinkle hover:text-periwinkle/70 hover:underline underline-offset-3 transition-all duration-500";
 
 const AboutPage = () => {
   return (
@@ -11,11 +11,15 @@ const AboutPage = () => {
         Placeholder for image
       </div>
 
-      <div className="text-pale-slate text-lg flex flex-col gap-1 lg:max-w-2/3">
-        <p className="text-xl">Hi there, I'm Indigo Rinearson.</p>
+      <div className="text-pale-slate text-lg flex flex-col gap-3 lg:max-w-2/3">
+        <p className="text-2xl">Hi there, I'm Indigo Rinearson.</p>
         <p>
-          I'm a full-stack software engineer based in Seattle, WA. something
-          something UI/UX that is functional, beautiful, and accessible.
+          <strong>
+            I'm a product-minded full-stack engineer based in Seattle, WA.
+          </strong>{" "}
+          I love working collaboratively to build software that solves problems
+          and delights people, with a focus on UI/UX that is functional,
+          beautiful, and accessible.
         </p>
         <p>
           My intro to programming began with courses in Lua and Java in high
@@ -37,8 +41,8 @@ const AboutPage = () => {
           >
             Kenyon College
           </a>{" "}
-          in Gambier, OH), where I majored in Medieval History and minored in
-          English. In 2021, I graduated from the Grace Hopper Program (
+          in Gambier, OH), where I majored in Medieval History. In 2021, I
+          graduated from the Grace Hopper Program (
           <a
             href="https://www.fullstackacademy.com/"
             target="_blank"
@@ -47,10 +51,7 @@ const AboutPage = () => {
           >
             Fullstack Academy
           </a>{" "}
-          in New York, NY), an immersive software engineering program centered
-          on full-stack JavaScript web development where I took on the
-          additional challenge of teaching myself TypeScript to build a mobile
-          app for my capstone project.
+          in New York, NY).
         </p>
         <p>
           Most recently, I worked at{" "}
@@ -71,11 +72,15 @@ const AboutPage = () => {
           >
             Axios HQ
           </a>
-          , as first a Solutions Engineer then as a Software Engineer. I
-          planned, developed, and rolled out a variety of features across our
-          application, including...
+          , as first a Solutions Engineer then as a Software Engineer. I shipped
+          a variety of features, owning both planning and implementation, across
+          our application, including a real-time collaborative editor, a RAG
+          chatbot assistant, and an overhaul of the primary workspace.
         </p>
-        <p>Outside of engineering, I enjoy...</p>
+        <p>
+          Outside of engineering, I enjoy logic puzzles, baking, storytelling,
+          ballroom dance, and bouldering.
+        </p>
 
         {/* INDI: Consider moving these to under the graphic depending on bio length */}
         <div className="flex flex-row gap-4 mt-4">

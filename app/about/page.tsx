@@ -1,3 +1,5 @@
+import { cn } from "@/lib/utils";
+import { AlternatingPortrait } from "@/components/alternating-portrait";
 import { GithubIcon, Linkedin02Icon } from "@hugeicons/core-free-icons";
 import { HugeiconsIcon } from "@hugeicons/react";
 
@@ -7,15 +9,16 @@ const LINK_CLASSNAME =
 const AboutPage = () => {
   return (
     <div className="flex flex-col lg:flex-row flex-1 justify-center items-center font-sans gap-8 lg:gap-16 p-12 lg:p-20">
-      <div className="shrink-0 bg-periwinkle rounded-full h-52 px-2 flex justify-center items-center">
-        Placeholder for image
+      <div className="flex flex-col items-center justify-center lg:gap-4 lg:pb-10">
+        <AlternatingPortrait />
+        <Links className="invisible lg:visible" />
       </div>
 
       <div className="text-pale-slate text-lg flex flex-col gap-3 lg:max-w-2/3">
-        <p className="text-2xl">Hi there, I'm Indigo Rinearson.</p>
+        <p className="text-2xl">Hi there, I&apos;m Indigo Rinearson.</p>
         <p>
           <strong>
-            I'm a product-minded full-stack engineer based in Seattle, WA.
+            I&apos;m a product-minded full-stack engineer based in Seattle, WA.
           </strong>{" "}
           I love working collaboratively to build software that solves problems
           and delights people, with a focus on UI/UX that is functional,
@@ -78,36 +81,41 @@ const AboutPage = () => {
           chatbot assistant, and an overhaul of the primary workspace.
         </p>
         <p>
-          Outside of engineering, I enjoy logic puzzles, baking, storytelling,
-          ballroom dance, and bouldering.
+          Outside of engineering, I enjoy art, logic puzzles, baking,
+          storytelling, ballroom dance, and bouldering.
         </p>
 
-        {/* INDI: Consider moving these to under the graphic depending on bio length */}
-        <div className="flex flex-row gap-4 mt-4">
-          <a
-            href="https://github.com/indi-rin"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="Link to GitHub profile"
-          >
-            <HugeiconsIcon
-              icon={GithubIcon}
-              className="text-light-grey hover:text-periwinkle transition-colors duration-500"
-            />
-          </a>
-          <a
-            href="https://www.linkedin.com/in/indigorinearson/"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="Link to LinkedIn profile"
-          >
-            <HugeiconsIcon
-              icon={Linkedin02Icon}
-              className="text-light-grey hover:text-periwinkle transition-colors duration-500"
-            />
-          </a>
-        </div>
+        <Links className="visible lg:invisible" />
       </div>
+    </div>
+  );
+};
+
+const Links = ({ className }: { className?: string }) => {
+  return (
+    <div className={cn("flex flex-row gap-4 mt-4", className)}>
+      <a
+        href="https://github.com/indi-rin"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Link to GitHub profile"
+      >
+        <HugeiconsIcon
+          icon={GithubIcon}
+          className="text-light-grey hover:text-periwinkle transition-colors duration-500"
+        />
+      </a>
+      <a
+        href="https://www.linkedin.com/in/indigorinearson/"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Link to LinkedIn profile"
+      >
+        <HugeiconsIcon
+          icon={Linkedin02Icon}
+          className="text-light-grey hover:text-periwinkle transition-colors duration-500"
+        />
+      </a>
     </div>
   );
 };

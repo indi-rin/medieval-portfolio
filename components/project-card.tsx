@@ -1,15 +1,29 @@
 "use client";
 
 import { HugeiconsIcon } from "@hugeicons/react";
-import { Item, ItemContent, ItemDescription, ItemTitle } from "./ui/item";
+import {
+  Item,
+  ItemContent,
+  ItemDescription,
+  ItemHeader,
+  ItemTitle,
+} from "./ui/item";
 import { GithubIcon, Globe02Icon } from "@hugeicons/core-free-icons";
 import { type Project } from "@/lib/content";
+import Image from "next/image";
 
 // INDI: Add image and improve styling
 export const ProjectCard = ({ project }: { project: Project }) => {
   return (
-    <Item variant="muted">
-      <ItemContent className="p-2">
+    <Item variant="muted" className="p-4">
+      <ItemHeader>
+        <Image
+          src={project.image}
+          alt={`Screenshot of ${project.name}`}
+          className="rounded-lg"
+        />
+      </ItemHeader>
+      <ItemContent className="px-2">
         <ItemTitle className="text-2xl text-dusty-grape font-semibold">
           {project.name}
         </ItemTitle>

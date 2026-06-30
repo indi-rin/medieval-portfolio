@@ -1,26 +1,14 @@
 "use client";
 
 import Image from "next/image";
-import { useEffect, useState, useSyncExternalStore } from "react";
+import { useEffect, useState } from "react";
 import { cn } from "@/lib/utils";
 import portrait from "@/public/portrait.png";
 import headshot from "@/public/headshot.jpg";
+import { useIsDesktop } from "@/lib/hooks";
 
 const INTERVAL_MS = 3000;
-const DESKTOP_QUERY = "(min-width: 1024px)";
-
 const IMAGE_CLASSNAME = "object-cover transition-opacity duration-500";
-
-const useIsDesktop = () =>
-  useSyncExternalStore(
-    (onStoreChange) => {
-      const mediaQuery = window.matchMedia(DESKTOP_QUERY);
-      mediaQuery.addEventListener("change", onStoreChange);
-      return () => mediaQuery.removeEventListener("change", onStoreChange);
-    },
-    () => window.matchMedia(DESKTOP_QUERY).matches,
-    () => false,
-  );
 
 export const AlternatingPortrait = () => {
   const isDesktop = useIsDesktop();

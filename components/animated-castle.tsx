@@ -74,6 +74,7 @@ export const AnimatedCastle = ({ onClick }: { onClick?: () => void }) => {
       onClick={onClick}
       className={cn("select-none", onClick && "cursor-pointer")}
       draggable={false}
+      loading="eager"
     />
   );
 };

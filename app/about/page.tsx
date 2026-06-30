@@ -1,9 +1,9 @@
 "use client";
 
-import { cn } from "@/lib/utils";
-import { AlternatingPortrait } from "@/components/alternating-portrait";
 import { GithubIcon, Linkedin02Icon } from "@hugeicons/core-free-icons";
 import { HugeiconsIcon } from "@hugeicons/react";
+import { cn } from "@/lib/utils";
+import { AlternatingPortrait } from "@/components/alternating-portrait";
 import { useIsDesktop } from "@/lib/hooks";
 import { medieval } from "@/lib/utils";
 

@@ -1,7 +1,7 @@
 "use client";
 
-import { AnimatedCastle } from "@/components/animated-castle";
 import { useRouter } from "next/navigation";
+import { AnimatedCastle } from "@/components/animated-castle";
 
 export default function Home() {
   const router = useRouter();

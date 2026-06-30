@@ -1,17 +1,17 @@
 "use client";
 
 import Link from "next/link";
+import { usePathname } from "next/navigation";
+import Image from "next/image";
 import {
   NavigationMenu,
   NavigationMenuItem,
   NavigationMenuLink,
   NavigationMenuList,
 } from "@/components/ui/navigation-menu";
-import Image from "next/image";
 import banner from "@/public/banner.png";
 import { useIsDesktop } from "@/lib/hooks";
 import { cn, medieval } from "@/lib/utils";
-import { usePathname } from "next/navigation";
 
 export const AppNav = () => {
   const isDesktop = useIsDesktop();

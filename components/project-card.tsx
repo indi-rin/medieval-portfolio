@@ -1,6 +1,7 @@
 "use client";
 
 import { HugeiconsIcon } from "@hugeicons/react";
+import Image from "next/image";
 import {
   Item,
   ItemContent,
@@ -10,7 +11,6 @@ import {
 } from "./ui/item";
 import { GithubIcon, Globe02Icon } from "@hugeicons/core-free-icons";
 import { type Project } from "@/lib/content";
-import Image from "next/image";
 import { cn, medieval } from "@/lib/utils";
 
 export const ProjectCard = ({ project }: { project: Project }) => {

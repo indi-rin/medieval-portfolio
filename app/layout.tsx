@@ -39,7 +39,10 @@ export default function RootLayout({
         figtree.variable,
       )}
     >
-      <body className="min-h-full flex flex-col bg-charcoal-grey">
+      <body
+        className="min-h-full flex flex-col bg-charcoal-grey"
+        suppressHydrationWarning
+      >
         <AppNav />
         {children}
       </body>

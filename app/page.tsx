@@ -7,7 +7,7 @@ export default function Home() {
   const router = useRouter();
 
   return (
-    <div className="flex justify-center pt-16 font-sans">
+    <div className="flex justify-center pt-20 font-sans">
       <AnimatedCastle onClick={() => router.push("/about")} />
     </div>
   );

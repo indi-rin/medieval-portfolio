@@ -72,7 +72,8 @@ export const AnimatedCastle = ({ onClick }: { onClick?: () => void }) => {
       onMouseEnter={() => animate("forward")}
       onMouseLeave={() => animate("reverse")}
       onClick={onClick}
-      className={cn(onClick && "cursor-pointer")}
+      className={cn("select-none", onClick && "cursor-pointer")}
+      draggable={false}
     />
   );
 };

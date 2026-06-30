@@ -11,12 +11,11 @@ export type Project = {
   image: StaticImageData;
 };
 
-// INDI: Flesh out descriptions
 export const projects: Project[] = [
   {
     name: "Set Game",
     description:
-      "After the Set Daily Puzzle was retired in 2025, some former coworkers and I decided to create our own version since we were such fans of the original.",
+      "After the Set Daily Puzzle was retired in 2025, some former coworkers and I decided to create our own since we were such fans.",
     github: "https://github.com/cpoonolly/set-game",
     link: "https://cpoonolly.github.io/set-game/",
     date: "August 2025 – present",

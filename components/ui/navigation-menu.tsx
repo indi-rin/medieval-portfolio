@@ -135,7 +135,7 @@ function NavigationMenuLink({
     <NavigationMenuPrimitive.Link
       data-slot="navigation-menu-link"
       className={cn(
-        "flex items-center gap-1.5 rounded-2xl p-3 text-lg transition-all outline-none hover:text-dusty-grape focus:bg-text-dusty-grape focus-visible:ring-[3px] focus-visible:ring-ring/50 focus-visible:outline-1 in-data-[slot=navigation-menu-content]:rounded-xl data-[active=true]:bg-dusty-grape/50 data-[active=true]:hover:text-dusty-grape data-[active=true]:focus:text-dusty-grape [&_svg:not([class*='size-'])]:size-4",
+        "flex items-center gap-1.5 rounded-2xl p-3 text-lg transition-all outline-none text-charcoal-blue hover:text-dusty-grape focus:text-dusty-grape focus-visible:ring-[3px] focus-visible:ring-ring/50 focus-visible:outline-1 in-data-[slot=navigation-menu-content]:rounded-xl data-[active=true]:bg-dusty-grape/50 data-[active=true]:hover:text-dusty-grape data-[active=true]:focus:text-dusty-grape [&_svg:not([class*='size-'])]:size-4",
         className,
       )}
       {...props}

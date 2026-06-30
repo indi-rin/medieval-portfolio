@@ -11,8 +11,8 @@ import {
 import { GithubIcon, Globe02Icon } from "@hugeicons/core-free-icons";
 import { type Project } from "@/lib/content";
 import Image from "next/image";
+import { cn, medieval } from "@/lib/utils";
 
-// INDI: Add image and improve styling
 export const ProjectCard = ({ project }: { project: Project }) => {
   return (
     <Item variant="muted" className="p-4">
@@ -23,8 +23,13 @@ export const ProjectCard = ({ project }: { project: Project }) => {
           className="rounded-lg"
         />
       </ItemHeader>
-      <ItemContent className="px-2">
-        <ItemTitle className="text-2xl text-dusty-grape font-semibold">
+      <ItemContent className="p-2">
+        <ItemTitle
+          className={cn(
+            "text-2xl text-dusty-grape font-semibold",
+            medieval.className,
+          )}
+        >
           {project.name}
         </ItemTitle>
 
@@ -33,7 +38,7 @@ export const ProjectCard = ({ project }: { project: Project }) => {
           <span>{project.description}</span>
         </ItemDescription>
 
-        <div className="flex flex-row items-center justify-center gap-2.5">
+        <div className="flex flex-row items-center justify-center gap-2.5 mt-2">
           <a
             href={project.github}
             target="_blank"

@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono, Figtree } from "next/font/google";
 import "./globals.css";
 import { cn } from "@/lib/utils";
-import { NavigationMenu } from "@/components/ui/navigation-menu";
 import { AppNav } from "@/components/app-nav";
 
 const figtree = Figtree({ subsets: ["latin"], variable: "--font-sans" });
@@ -44,7 +43,7 @@ export default function RootLayout({
         suppressHydrationWarning
       >
         <AppNav />
-        {children}
+        <div className="mt-24">{children}</div>
       </body>
     </html>
   );

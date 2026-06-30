@@ -5,6 +5,7 @@ import { AlternatingPortrait } from "@/components/alternating-portrait";
 import { GithubIcon, Linkedin02Icon } from "@hugeicons/core-free-icons";
 import { HugeiconsIcon } from "@hugeicons/react";
 import { useIsDesktop } from "@/lib/hooks";
+import { medieval } from "@/lib/utils";
 
 const LINK_CLASSNAME =
   "text-periwinkle hover:text-periwinkle/70 hover:underline underline-offset-3 transition-all duration-500";
@@ -13,14 +14,16 @@ const AboutPage = () => {
   const isDesktop = useIsDesktop();
 
   return (
-    <div className="flex flex-col lg:flex-row flex-1 justify-center items-center lg:items-start font-sans gap-8 lg:gap-16 p-12 lg:p-20">
+    <div className="flex flex-col lg:flex-row flex-1 justify-center items-center lg:items-start font-sans gap-8 lg:gap-16 p-12 lg:p-20 lg:pt-28">
       <div className="flex flex-col items-center justify-center lg:gap-4">
         <AlternatingPortrait />
         {isDesktop && <Links />}
       </div>
 
       <div className="text-pale-slate text-lg flex flex-col gap-3 lg:max-w-2/3">
-        <p className="text-2xl">Hi there, I&apos;m Indigo Rinearson.</p>
+        <p className={cn("text-2xl", medieval.className)}>
+          Hi there, I&apos;m Indigo Rinearson.
+        </p>
         <p>
           <strong>
             I&apos;m a product-minded full-stack engineer based in Seattle, WA.
